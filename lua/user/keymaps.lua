@@ -67,3 +67,11 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+
+
+-- Format --
+keymap("n", "<C-y>", ":lua vim.lsp.buf.formatting_seq_sync()<CR>", opts)
+
+-- python --
+--- isort ---
+keymap("n", "<C-i>", ":silent !isort %<CR>", opts)
